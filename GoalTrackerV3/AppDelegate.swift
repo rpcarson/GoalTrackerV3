@@ -37,6 +37,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        DataManager.fetchGoalData()
         
         
+        /*
+        let userNotificationSettings = UIUserNotificationSettings(forTypes: .Alert, categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(userNotificationSettings)
+        
+        */
+        
+        //TODO: - Remove
+        NSUserDefaults.standardUserDefaults().setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+
+        
+        
         return true
     }
 

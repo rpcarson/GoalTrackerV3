@@ -6,7 +6,7 @@
 //  Copyright © 2016 Reed Carson. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 enum GoalType: String {
@@ -22,6 +22,23 @@ enum PriorityLevel: String {
 
 struct Goal {
     
+    var priorityColor: UIColor {
+        switch priority {
+        case "High": return .redColor()
+        case "Medium": return .yellowColor()
+        case "Low": return .greenColor()
+        default: return .whiteColor()
+        }
+    }
+    
+    var nsDateCreated: NSDate {
+        return DateFormatter.dateFromString(dateCreated)!
+    }
+    
+    
+    
+    
+    
     var name: String
     var dateCreated: String
     var summary: String
@@ -29,5 +46,7 @@ struct Goal {
     var priority: String
     var deadline: String
     var dateCompleted: String?
+    
+
     
 }

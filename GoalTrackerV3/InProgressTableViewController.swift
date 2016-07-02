@@ -62,20 +62,18 @@ class InProgressTableViewController: UITableViewController {
         
         cell.dateCreated.text = goal.dateCreated
         cell.name.text = goal.name
-        
-        cell.backgroundColor = cell.priorityColor[goal.priority]
+        cell.backgroundColor = goal.priorityColor
 
         return cell
     }
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        //TODO: - make goal deletalble
         return true
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let goal = DataManager.convertManagedObjectToGoal(appDelegate.goalsObjects[indexPath.row])
-        showDetailView(forGoal: goal)
+        showDetailView(forGoal: goal, withIndex: indexPath.row)
     }
  
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -119,14 +117,17 @@ class InProgressTableViewController: UITableViewController {
         let editVC: EditViewController = storyboard.instantiateViewControllerWithIdentifier("editViewController") as! EditViewController
         editVC.hidesBottomBarWhenPushed = true
         editVC.isEditable = true
+        editVC.isNewGoal = true
         navigationController?.pushViewController(editVC, animated: true)
     }
-    func showDetailView(forGoal goal: Goal) {
+    func showDetailView(forGoal goal: Goal, withIndex: Int) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = storyboard.instantiateViewControllerWithIdentifier("editViewController") as! EditViewController
         detailVC.hidesBottomBarWhenPushed = true
         detailVC.isEditable = false
         detailVC.selectedGoal = goal
+        detailVC.isNewGoal = false
+        detailVC.goalIndex = withIndex
         navigationController?.pushViewController(detailVC, animated: true)
     }
 

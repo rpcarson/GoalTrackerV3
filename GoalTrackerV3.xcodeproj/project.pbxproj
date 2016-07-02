@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5B12A2DC1D21DB2100415921 /* PriorityPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12A2DB1D21DB2100415921 /* PriorityPicker.swift */; };
-		5B12A2E01D21E69600415921 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12A2DF1D21E69600415921 /* DatePicker.swift */; };
 		5B77DA041D1DD1BB00CDA9F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77DA031D1DD1BB00CDA9F7 /* AppDelegate.swift */; };
 		5B77DA091D1DD1BB00CDA9F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B77DA071D1DD1BB00CDA9F7 /* Main.storyboard */; };
 		5B77DA0C1D1DD1BB00CDA9F7 /* GoalTrackerV3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B77DA0A1D1DD1BB00CDA9F7 /* GoalTrackerV3.xcdatamodeld */; };
@@ -26,7 +25,9 @@
 		5B77DA491D1DE79500CDA9F7 /* TitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77DA481D1DE79500CDA9F7 /* TitleTextField.swift */; };
 		5B77DA4B1D1DF33800CDA9F7 /* InProgressGoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77DA4A1D1DF33800CDA9F7 /* InProgressGoalCell.swift */; };
 		5B77DA4D1D1DF95200CDA9F7 /* SummaryTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77DA4C1D1DF95200CDA9F7 /* SummaryTextView.swift */; };
+		5BA9E6631D2489A300907CA2 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA9E6621D2489A300907CA2 /* TextFieldAlert.swift */; };
 		5BBD01901D1F35E0008B9865 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD018F1D1F35E0008B9865 /* DataManager.swift */; };
+		5BC1B0651D2740E8004F8B04 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1B0641D2740E8004F8B04 /* DatePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,6 @@
 
 /* Begin PBXFileReference section */
 		5B12A2DB1D21DB2100415921 /* PriorityPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityPicker.swift; sourceTree = "<group>"; };
-		5B12A2DF1D21E69600415921 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePicker.swift; path = ../DatePicker.swift; sourceTree = "<group>"; };
 		5B77DA001D1DD1BB00CDA9F7 /* GoalTrackerV3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalTrackerV3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B77DA031D1DD1BB00CDA9F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B77DA081D1DD1BB00CDA9F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,7 +72,9 @@
 		5B77DA481D1DE79500CDA9F7 /* TitleTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextField.swift; sourceTree = "<group>"; };
 		5B77DA4A1D1DF33800CDA9F7 /* InProgressGoalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InProgressGoalCell.swift; sourceTree = "<group>"; };
 		5B77DA4C1D1DF95200CDA9F7 /* SummaryTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryTextView.swift; sourceTree = "<group>"; };
+		5BA9E6621D2489A300907CA2 /* TextFieldAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
 		5BBD018F1D1F35E0008B9865 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		5BC1B0641D2740E8004F8B04 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,14 +169,15 @@
 		5B77DA391D1DD39700CDA9F7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5B12A2DF1D21E69600415921 /* DatePicker.swift */,
 				5B77DA3A1D1DD3AD00CDA9F7 /* GoalViews.swift */,
+				5BC1B0641D2740E8004F8B04 /* DatePicker.swift */,
 				5B77DA421D1DD93E00CDA9F7 /* Goal.swift */,
 				5B77DA461D1DE4EB00CDA9F7 /* DateFormatter.swift */,
 				5B77DA481D1DE79500CDA9F7 /* TitleTextField.swift */,
 				5B77DA4A1D1DF33800CDA9F7 /* InProgressGoalCell.swift */,
 				5B77DA4C1D1DF95200CDA9F7 /* SummaryTextView.swift */,
 				5BBD018F1D1F35E0008B9865 /* DataManager.swift */,
+				5BA9E6621D2489A300907CA2 /* TextFieldAlert.swift */,
 				5B12A2DB1D21DB2100415921 /* PriorityPicker.swift */,
 			);
 			name = Models;
@@ -311,12 +314,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA9E6631D2489A300907CA2 /* TextFieldAlert.swift in Sources */,
 				5B77DA4B1D1DF33800CDA9F7 /* InProgressGoalCell.swift in Sources */,
 				5B77DA491D1DE79500CDA9F7 /* TitleTextField.swift in Sources */,
 				5B77DA4D1D1DF95200CDA9F7 /* SummaryTextView.swift in Sources */,
 				5B77DA471D1DE4EB00CDA9F7 /* DateFormatter.swift in Sources */,
 				5B77DA451D1DDA2B00CDA9F7 /* EditViewController.swift in Sources */,
 				5B77DA041D1DD1BB00CDA9F7 /* AppDelegate.swift in Sources */,
+				5BC1B0651D2740E8004F8B04 /* DatePicker.swift in Sources */,
 				5B77DA411D1DD6F300CDA9F7 /* InProgressTableViewController.swift in Sources */,
 				5B77DA0C1D1DD1BB00CDA9F7 /* GoalTrackerV3.xcdatamodeld in Sources */,
 				5B77DA3B1D1DD3AD00CDA9F7 /* GoalViews.swift in Sources */,
@@ -325,7 +330,6 @@
 				5B77DA3F1D1DD53D00CDA9F7 /* DetailViewController.swift in Sources */,
 				5BBD01901D1F35E0008B9865 /* DataManager.swift in Sources */,
 				5B77DA431D1DD93E00CDA9F7 /* Goal.swift in Sources */,
-				5B12A2E01D21E69600415921 /* DatePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

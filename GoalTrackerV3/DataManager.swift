@@ -56,6 +56,31 @@ struct DataManager {
         
     }
     
+    static func updateGoal(goalIndex: Int, summary: String?, priority: String?, deadline: String?) {
+        
+        print("updating goal \(goalIndex))")
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let goalObject = appDelegate.goalsObjects[goalIndex]
+        if let summary = summary {
+            goalObject.setValue(summary, forKey: "summary")
+        }
+        if let priority = priority {
+            goalObject.setValue(priority, forKey: "priority")
+        }
+        if let deadline = deadline {
+            goalObject.setValue(deadline, forKey: "deadline")
+        }
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("u fucked up updating this goal")
+        }
+        
+    }
+    
     static func fetchGoalData() {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

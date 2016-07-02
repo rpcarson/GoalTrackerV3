@@ -9,8 +9,7 @@
 import UIKit
 
 class InProgressGoalCell: UITableViewCell {
-    
-    let priorityColor = ["High":UIColor.redColor(), "Medium": UIColor.yellowColor(), "Low":UIColor.greenColor()]
+
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var dateCreated: UILabel!
